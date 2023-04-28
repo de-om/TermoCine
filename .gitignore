@@ -1,3 +1,9 @@
+# Project specific and workspace
+.vs
+*.exe
+codigo/matlab/Newman/
+codigo/matlab/output/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
