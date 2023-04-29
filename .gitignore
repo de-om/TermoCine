@@ -3,7 +3,10 @@
 *.exe
 codigo/matlab/Newman/
 codigo/matlab/output/
+.DS_Store
 
+
+# Provided by GitHub
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
