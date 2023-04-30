@@ -1,8 +1,8 @@
 # Project specific and workspace
 .vs
 *.exe
-codigo/matlab/Newman/
-codigo/matlab/output/
+TFG_source_code/matlab/Newman/
+TFG_source_code/matlab/output/
 .DS_Store
 
 
