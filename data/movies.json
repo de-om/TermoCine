@@ -1,0 +1,123 @@
+{
+    "film1" : 
+    {
+        "title": "Paris is Burning",
+        "path": "data/parisisburning_248x180_23,98fps.dat",
+        "frame_height": 180,
+        "frame_width": 248,
+        "fps": 23.98,
+        "initial_frame": 1393,
+        "final_frame": 103864,
+        "reference_n_shots": 539
+    },
+    "film2" : 
+    {
+        "title": "Bullets over Broadway",
+        "path": "data/bulletsoverbroadway_304x160_23,98fps.dat",
+        "frame_height": 160,
+        "frame_width": 304,
+        "fps": 23.98,
+        "initial_frame": 2789,
+        "final_frame": 138971,
+        "reference_n_shots": 113
+    },
+    "film3" : 
+    {
+        "title": "Matrix",
+        "path": "data/matrix_327x136_23,98fps.dat",
+        "frame_height": 136,
+        "frame_width": 327,
+        "fps": 23.98,
+        "initial_frame": 2121,
+        "final_frame": 186177,
+        "reference_n_shots": 2341
+    },
+    "film4" : 
+    {
+        "title": "Lost in Translation",
+        "path": "data/lostintranslation_256x136_25fps.dat",
+        "frame_height": 136,
+        "frame_width": 256,
+        "fps": 25,
+        "initial_frame": 1646,
+        "final_frame": 137963,
+        "reference_n_shots": 869
+    },
+    "film5" : 
+    {
+        "title": "Inception",
+        "path": "data/inception_320x134_23,98fps.dat",
+        "frame_height": 134,
+        "frame_width": 320,
+        "fps": 23.98,
+        "initial_frame": 957,
+        "final_frame": 202687,
+        "reference_n_shots": 2654
+    },
+    "film6" : 
+    {
+        "title": "Selma",
+        "path": "data/selma_320x134_23,98fps.dat",
+        "frame_height": 134,
+        "frame_width": 320,
+        "fps": 23.98,
+        "initial_frame": 1446,
+        "final_frame": 172397,
+        "reference_n_shots": 1369
+    },
+    "film7" : 
+    {
+        "title": "Inside Out",
+        "path": "data/insideout_320x180_23,98fps.dat",
+        "frame_height": 180,
+        "frame_width": 320,
+        "fps": 23.98,
+        "initial_frame": 1500,
+        "final_frame": 124050,
+        "reference_n_shots": 1255
+    },
+    "film8" : 
+    {
+        "title": "Senna",
+        "path": "data/senna_320x180_23,98fps.dat",
+        "frame_height": 180,
+        "frame_width": 320,
+        "fps": 23.98,
+        "initial_frame": 4533,
+        "final_frame": 146800,
+        "reference_n_shots": 893
+    },
+    "film9" : 
+    {
+        "title": "Birdman",
+        "path": "data/birdman_320x174_23,98fps.dat",
+        "frame_height": 174,
+        "frame_width": 320,
+        "fps": 23.98,
+        "initial_frame": 2321,
+        "final_frame": 161524,
+        "reference_n_shots": 1
+    },
+    "film10" : 
+    {
+        "title": "1917",
+        "path": "data/1917_360x152_29,97fps.dat",
+        "frame_height": 152,
+        "frame_width": 360,
+        "fps": 29.97,
+        "initial_frame": 1803,
+        "final_frame": 196820,
+        "reference_n_shots": 1
+    },
+    "film11" : 
+    {
+        "title": "The Circle",
+        "path": "data/thecircle_384x160_23,98fps.dat",
+        "frame_height": 160,
+        "frame_width": 384,
+        "fps": 23.98,
+        "initial_frame": "no data",
+        "final_frame": "no data",
+        "reference_n_shots": "no data"
+    }
+}
