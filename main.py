@@ -1,8 +1,10 @@
-from load_files import Movie, MovieDeltas, MovieVariables
+from load_files import Movie
 
-nnn = Movie(1)
-mmm = MovieVariables(7)
-ooo = MovieDeltas(3)
+default_movies = Movie.load_default_movies("data/")
 
-print(ooo.delta_energy[1000:1050])
-print("test")
+for movie in default_movies:
+    movie.load_data()
+    movie.process_data_to_deltas()
+
+for film in default_movies:
+    print(film)
