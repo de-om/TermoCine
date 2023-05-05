@@ -9,8 +9,8 @@ class Movie:
         identificator: str,
         title: str,
         data_path: str,
-        frame_height: int,
         frame_width: int,
+        frame_height: int,
         fps: float,
         initial_frame: int,
         final_frame: int,
@@ -19,8 +19,8 @@ class Movie:
         self.identificator = identificator
         self.title = title
         self.data_path = data_path
-        self.frame_height = frame_height
         self.frame_width = frame_width
+        self.frame_height = frame_height
         self.fps = fps
         self.initial_frame = initial_frame
         self.final_frame = final_frame
@@ -81,8 +81,8 @@ class Movie:
                 identificator,
                 movie["title"],
                 movie["path"],
-                movie["frame_height"],
                 movie["frame_width"],
+                movie["frame_height"],
                 movie["fps"],
                 movie["initial_frame"],
                 movie["final_frame"],
