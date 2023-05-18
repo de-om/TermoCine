@@ -2,8 +2,12 @@ import json
 import os
 import pathlib
 
+import numpy as np
+
 
 class Movie:
+    count = 0
+
     def __init__(
         self,
         identificator: str,
@@ -25,6 +29,8 @@ class Movie:
         self.initial_frame = initial_frame
         self.final_frame = final_frame
         self.reference_n_shots = reference_n_shots
+
+        Movie.count += 1
 
     # @property  # make values immutable (?)
     # def metadata(self):
@@ -56,18 +62,12 @@ class Movie:
         return True
 
     def process_data_to_deltas(self) -> bool:  # Error management
-        self.delta_energy = []
-        self.abs_delta_energy = []
-        for energy1, energy2 in zip(self.energy, self.energy[1:]):
-            delta = energy2 - energy1
-            self.delta_energy.append(delta)
-            self.abs_delta_energy.append(abs(delta))
-        self.delta_entropy = []
-        self.abs_delta_entropy = []
-        for entropy1, entropy2 in zip(self.entropy, self.entropy[1:]):
-            delta = entropy2 - entropy1
-            self.delta_entropy.append(delta)
-            self.abs_delta_entropy.append(abs(delta))
+        energy = np.array(self.energy)
+        self.delta_energy = list(energy[1:] - energy[:-1])
+        self.abs_delta_energy = list(np.absolute(self.delta_energy))
+        entropy = np.array(self.entropy)
+        self.delta_entropy = list(entropy[1:] - entropy[:-1])
+        self.abs_delta_entropy = list(np.absolute(self.delta_entropy))
         return True
 
     @staticmethod
@@ -90,6 +90,11 @@ class Movie:
             )
             for identificator, movie in movie_list.items()
         ]
+
+    @classmethod
+    def total_movies(cls) -> None:
+        print(f"Total of {cls.count} movies loaded")
+        return cls.count
 
     # Implement methods to print(Movie) and so on
     def __str__(self) -> str:
