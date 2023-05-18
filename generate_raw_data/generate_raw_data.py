@@ -1,8 +1,9 @@
 # Clase y métodos para a partir de un archivo de vídeo generar el .dat
 # y el json con los metadatos
 import os
+
 import ffmpeg
-import numpy as np
+from numpy import log
 from PIL import Image
 
 # from PIL import Image
@@ -27,12 +28,15 @@ total_frames = int(video_info["nb_frames"])
 fps = int(video_info["r_frame_rate"].split("/")[0]) / 1000
 
 
+# One by one processing option for less harddrive use with more time cost
 # in_file.output(f"{frames_output}/%06d.bmp", start_number=1).overwrite_output().run()
 for frame in range(1, total_frames + 1):
     # if frame < 10:
     in_file = ffmpeg.input(video_path, ss=frame / fps)
     in_file.output(f"{frames_output}/{frame:06d}.bmp", vframes=1).run()
+    # Progress bar with curent_frame/total_frames
 
+# One by one processing should be implemented in the previous loop
 images_to_process = sorted(os.listdir(frames_output))
 for image_name in images_to_process:
     im = Image.open(f"{frames_output}/{image_name}")
@@ -60,7 +64,7 @@ for image_name in images_to_process:
     for i in range(256):
         prob = histogram[i] / (3 * frame_width * frame_height)
         if prob > 0:
-            suma_entropia += -prob * np.log(prob)
+            suma_entropia += -prob * log(prob)
 
     im.close()
     if CLEAR_MEMORY:  # Implementar esta opción
@@ -72,8 +76,3 @@ for image_name in images_to_process:
         f.write(
             f"{image_name};{energia_media};{suma_r};{suma_g};{suma_b};{sigma};{suma_entropia}\n"
         )
-
-
-class LoadMovie:
-    def __init__(self, video_path) -> None:
-        self.video_path = video_path
